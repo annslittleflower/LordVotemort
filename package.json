@@ -1,0 +1,29 @@
+{
+  "name": "lordvotemort",
+  "version": "1.0.0",
+  "description": "Simple voting app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarthaClaus/LordVotemort.git"
+  },
+  "author": "Dartha Claus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarthaClaus/LordVotemort/issues"
+  },
+  "homepage": "https://github.com/DarthaClaus/LordVotemort#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "mongoose": "^5.0.2",
+    "redis": "^2.8.0"
+  }
+}
