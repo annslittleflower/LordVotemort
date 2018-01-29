@@ -1,17 +1,22 @@
 'use strict';
 
 const Koa = require('koa');
-const app = new Koa();
 const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
 const bodyParser = require('koa-bodyparser');
 
 
 const config = require('./config');
 const sessionStorage = require('./sessionStorage');
+const routes = require('./api/routes');
+const catchError = require('./catchError');
+
+mongoose.Promise = require('bluebird');
+const app = new Koa();
 
 app.use(bodyParser());
-
+app.use(catchError);
+app.use(routes.routes());
+app.use(routes.allowedMethods());
 
 const dbConnect = async function () {
     try {
