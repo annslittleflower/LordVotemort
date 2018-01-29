@@ -9,11 +9,11 @@ const client = redis.createClient({host: config.redis.host, port: config.redis.p
 bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
 
-client.on('connect', function() {
+client.on('connect', () => {
     console.log('connected to redis');
 });
 
-client.on('error', function (err) {
+client.on('error', err => {
     console.log("Error " + err);
 });
 

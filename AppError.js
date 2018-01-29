@@ -1,3 +1,5 @@
+'use strict';
+
 const AppError = class extends Error {
     constructor(httpStatus, message) {
         super(message);

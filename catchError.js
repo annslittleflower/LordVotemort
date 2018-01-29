@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = async function (ctx, next) {
     try {
         await next();
